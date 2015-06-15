@@ -105,10 +105,10 @@ class blank_widget extends WP_Widget {
 	    </p>
 	    <p>
 		<label for="<?php echo $this->get_field_id('category'); ?>">
-		    <?php echo('Slide category'); ?>
+		    <?php echo('Category'); ?>
 		</label><br>
 		<select id="<?php echo $this->get_field_id('category'); ?>" name="<?php echo $this->get_field_name('category'); ?>" class="widefat" style="width:100%;">
-		    <?php foreach(get_terms('slides_categories','parent=0&hide_empty=0') as $term) { ?>
+		    <?php foreach(get_terms('cpt_category_name_goes_here','parent=0&hide_empty=0') as $term) { ?>
 		    <option <?php selected( $instance['category'], $term->term_id ); ?> value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
 		    <?php } ?>      
 		</select>
